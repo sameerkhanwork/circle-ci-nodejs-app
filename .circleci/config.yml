@@ -9,7 +9,11 @@ jobs:
       - checkout
       - run: npm install
       - run: npm test
-      - run: npm start
+      # - run: npm start
+      - run:
+          name: Start the app
+          command: npm start &
+
 
 workflows:
   version: 2
